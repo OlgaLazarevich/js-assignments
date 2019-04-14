@@ -227,20 +227,13 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-    throw new Error('Not implemented');
-//      let arr = str.split('');
-  
-  
-  
-//   var newArr = arr.map(function(item) {
-    
-//     return String.fromCharCode(item.charCodeAt()+13)
-    
-//   });
-  
-  
-//   return newArr.join('')
+  let input     = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  let output    = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  let index     = x => input.indexOf(x);
+  let translate = x => index(x) > -1 ? output[index(x)] : x;
+  return str.split('').map(translate).join('');
 }
+
 
 /**
  * Returns true if the value is string; otherwise false.
@@ -285,7 +278,20 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-    throw new Error('Not implemented');
+    let arr = ['A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣',
+    'A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
+    'A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥',
+    'A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠'];
+   
+   
+   for (var i = 0; i < arr.length; i++) {
+     
+     if(value == arr[i])
+     return i
+  
+     }
+   
+   return value
 }
 
 

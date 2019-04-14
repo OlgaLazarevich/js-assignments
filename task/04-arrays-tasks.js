@@ -516,7 +516,11 @@ function getFalsyValuesCount(arr) {
  *    [ true, 0, 1, 'true' ], true => 1
  */
 function findAllOccurences(arr, item) {
-  throw new Error('Not implemented');
+  let newArr = arr.filter(function(number) {
+    return number === item;
+  });
+    
+    return newArr.length
 }
 
 /**
@@ -531,7 +535,7 @@ function findAllOccurences(arr, item) {
  *    ['rock', 'paper', 'scissors']     => 'rock,paper,scissors'
  */
 function toStringList(arr) {
-  throw new Error('Not implemented');
+  return arr.join(',')
 }
 
 
@@ -582,7 +586,18 @@ function sortCitiesArray(arr) {
  *           [0,0,0,0,1]]   
  */
 function getIdentityMatrix(n) {
-  throw new Error('Not implemented');
+  let result = Array(n).fill(0);
+    
+    result.map(function(item, i, arr) {
+    
+      let matrixItem = Array(n).fill(0);
+      arr[i] = matrixItem;
+      matrixItem[i] = 1;
+      
+});
+    
+    
+    return result
 }
 
 /**
