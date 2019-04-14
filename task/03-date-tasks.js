@@ -22,7 +22,7 @@
  *    'Sun, 17 May 1998 03:00:00 GMT+01' => Date()
  */
 function parseDataFromRfc2822(value) {
-   throw new Error('Not implemented');
+   return new Date(value)
 }
 
 /**
@@ -37,7 +37,20 @@ function parseDataFromRfc2822(value) {
  *    '2016-01-19T08:07:37Z' => Date()
  */
 function parseDataFromIso8601(value) {
+   
    throw new Error('Not implemented');
+      // let d =  new Date(value);
+      
+      // function pad(n) {return n<10 ? '0'+n : n}
+      //   return d.getUTCFullYear()+'-'
+      //        + pad(d.getUTCMonth()+1)+'-'
+      //        + pad(d.getUTCDate())+'T'
+      //        + pad(d.getUTCHours())+':'
+      //        + pad(d.getUTCMinutes())+':'
+      //        + pad(d.getUTCSeconds())+'Z'
+    
+    
+
 }
 
 
